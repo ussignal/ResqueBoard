@@ -78,7 +78,7 @@ class JobHelper
                             <?php
 
                 if (isset($job['log'])) {
-                    echo '<div class="console"><span class="error">' . $job['log'] . '</error></div>';
+                    echo '<div class="console"><span class="error">' . $job['log'] . '</span></div>';
                 }
 
                 if (isset($job['trace'])) {
@@ -89,6 +89,11 @@ class JobHelper
 
                             <h5>Job arguments</h5>
                             <pre class="job-args"><code class="language-php"><?php echo $job['args'] ?></code></pre>
+                            <?php if (isset($job['log'])): ?>
+                                <h5>Output</h5>
+                                <div class="console"><span class="error"><?php echo $job['output'] ?></span></div>
+                            <?php endif; ?>
+                }
                         </div>
                     </div>
                 </li>
