@@ -93,7 +93,6 @@ class JobHelper
                                 <h5>Output</h5>
                                 <div class="console"><span class="error"><?php echo $job['output'] ?></span></div>
                             <?php endif; ?>
-                }
                         </div>
                     </div>
                 </li>
