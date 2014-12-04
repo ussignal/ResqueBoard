@@ -146,6 +146,7 @@ class ResqueStat
      * Return a worker stats
      *
      * @param int $workerId Process ID of the worker
+     * @return array
      *
      * @since 1.2.0
      */
@@ -501,8 +502,9 @@ class ResqueStat
     /**
      * Return a list of pending jobs
      *
+     * @param $options
      * @since 1.4.0
-     * @return Array an Array of jobs
+     * @return array an Array of jobs
      */
     protected function getPendingJobs($options)
     {
@@ -583,8 +585,6 @@ class ResqueStat
      */
     public function getLogs($options = array())
     {
-        $eventTypeList = array('check' ,'done', 'fail', 'fork', 'found', 'got', 'kill', 'process', 'prune', 'reconnect', 'shutdown', 'sleep', 'start');
-
         $default = array(
             'page' => 1,
             'limit' => null,
@@ -865,7 +865,7 @@ class ResqueStat
      *
      * @param \MongoCursor $cursor A traversable object
      *
-     * @return an array of jobs
+     * @return array an array of jobs
      */
     private function formatJobs($cursor)
     {

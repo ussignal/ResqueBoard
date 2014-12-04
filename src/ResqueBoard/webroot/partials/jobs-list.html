@@ -11,7 +11,7 @@
         <div class="accordion-heading" data-toggle="collapse" data-target="#_{{job.job_id}}">
             <div class="accordion-toggle">
                 <span class="job-status-icon">
-                    <fa fa-job status="job.status"></fa fa-job>
+                    <fa fa-job status="job.status"></fa>
                 </span>
 
                 <span ng-show="job.worker" class="label label-info pull-right">{{job.worker}}</span>
@@ -27,7 +27,7 @@
         <div class="collapse accordion-body" id="_{{job.job_id}}">
             <div class="accordion-inner">
                 <div ng-show="job.status==3">
-                    <div class="console"><span class="error">{{job.log}}</error></div>
+                    <div class="console"><span class="error">{{job.log}}</span></div>
 
                     <h5>Error trace</h5>
                     <pre class="job-trace"><code class="language-php">{{job.trace}}</code></pre>
