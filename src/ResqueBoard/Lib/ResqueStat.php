@@ -910,6 +910,7 @@ class ResqueStat
         foreach ($jobsCursor as $successJob) {
             $jobs[$successJob['d']['job_id']]['status'] = self::JOB_STATUS_COMPLETE;
             $jobs[$successJob['d']['job_id']]['took'] = $successJob['d']['time'];
+            $jobs[$successJob['d']['job_id']]['output'] = !empty($successJob['d']['time']) ? $successJob['d']['time'] : null;
             unset($jobIds[array_search($successJob['d']['job_id'], $jobIds)]);
         }
 
@@ -921,6 +922,7 @@ class ResqueStat
                 $jobs[$failedJob['d']['job_id']]['status'] = self::JOB_STATUS_FAILED;
                 $jobs[$failedJob['d']['job_id']]['log'] = $failedJob['d']['log'];
                 $jobs[$failedJob['d']['job_id']]['took'] = $failedJob['d']['time'];
+                $jobs[$failedJob['d']['job_id']]['output'] = !empty($failedJob['d']['time']) ? $failedJob['d']['time'] : null;
                 $pipelineCommands[] = array('get', 'failed:' . $failedJob['d']['job_id']);
                 unset($jobIds[array_search($failedJob['d']['job_id'], $jobIds)]);
             }
