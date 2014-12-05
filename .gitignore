@@ -7,4 +7,5 @@ src/ResqueBoard/cache/*
 *.DS_Store
 *Thumbs.db
 *~
+
 .idea
