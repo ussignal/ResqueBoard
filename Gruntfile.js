@@ -79,6 +79,7 @@ module.exports = function(grunt) {
                     "src/ResqueBoard/webroot/js/controllers/pendingJobController.js": ["assets/js/controllers/pendingJobController.js"],
                     "src/ResqueBoard/webroot/js/controllers/loadOverviewController.js": ["assets/js/controllers/loadOverviewController.js"],
                     "src/ResqueBoard/webroot/js/controllers/logActivityController.js": ["assets/js/controllers/logActivityController.js"],
+                    "src/ResqueBoard/webroot/js/controllers/jobViewController.js": ["assets/js/controllers/jobViewController.js"],
                     "src/ResqueBoard/webroot/js/controllers/jobClassDistributionController.js": ["assets/js/controllers/jobClassDistributionController.js"]
                 }
             },
