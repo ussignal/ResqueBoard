@@ -31,7 +31,7 @@
 	    </li>
     </ul>
 
-	<div class="with-sidebar">
+	<div class="with-sidebar" ng-controller="jobViewController">
 		<div class="bloc">
 
 		<?php

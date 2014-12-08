@@ -32,7 +32,7 @@
 	    </li>
     </ul>
 
-	<div class="with-sidebar">
+	<div class="with-sidebar" ng-controller="jobViewController">
 
 		<div class="ftr-bloc">
 			<h3>Future scheduled jobs activities</h3>
