@@ -12,10 +12,16 @@
 			"role": "Developer"
 		}
 	],
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/paco3346/php-resque-ex"
+		}
+	],
 	"require": {
 		"php": ">=5.3.0",
 		"slim/slim" : "~2.3.0",
-		"kamisama/php-resque-ex": ">=1.2.1",
+		"kamisama/php-resque-ex": "dev-master",
 		"kamisama/php-resque-ex-scheduler": ">=1.1.0",
 		"kamisama/resque-status": ">=0.0.1",
 		"doctrine/cache": "~1.0"
