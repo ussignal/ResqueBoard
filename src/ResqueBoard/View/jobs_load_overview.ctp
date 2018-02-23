@@ -198,8 +198,8 @@ $headers = array(
 
 
 		    					echo '<li class="divider"></li><li class="btn-links">';
-		    					echo '<a href="jobs/overview/' . $range . '/' . ResqueBoard\Lib\DateHelper::{'getStart' . $range}($uriDate, '+1')->format('c') . '" class="btn pull-right">Next '.$range.' <i class="fa fa-chevron-right"></i></a>';
-								echo '<a href="jobs/overview/' . $range . '/' . ResqueBoard\Lib\DateHelper::{'getStart' . $range}($uriDate, '-1')->format('c') . '" class="btn pull-left"><i class="fa fa-chevron-left"></i> Previous '.$range.'</a>';
+		    					echo '<a href="jobs/overview/' . $range . '/' . urlencode(ResqueBoard\Lib\DateHelper::{'getStart' . $range}($uriDate, '+1')->format('c')) . '" class="btn pull-right">Next '.$range.' <i class="fa fa-chevron-right"></i></a>';
+								echo '<a href="jobs/overview/' . $range . '/' . urlencode(ResqueBoard\Lib\DateHelper::{'getStart' . $range}($uriDate, '-1')->format('c')) . '" class="btn pull-left"><i class="fa fa-chevron-left"></i> Previous '.$range.'</a>';
 		    					echo '</li>';
 
 		    				echo '</li>';
