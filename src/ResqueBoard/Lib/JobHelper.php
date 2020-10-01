@@ -91,7 +91,7 @@ class JobHelper
                             <pre class="job-args"><code class="language-php"><?php echo $job['args'] ?></code></pre>
                             <?php if (isset($job['output'])): ?>
                                 <h5>Output</h5>
-                                <div class="console output">
+                                <div class="console">
                                     <span class="error" style="white-space: pre"><?php echo $job['output'] ?></span>
                                 </div>
                             <?php endif; ?>

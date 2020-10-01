@@ -13,12 +13,9 @@ angular.module("app").controller("jobViewController", [
             };
 
             socket.onmessage = function(message) {
-                updateJobOutput(JSON.parse(message.data));
+                //JSON.parse(message.data)
+                //do stuff
             };
-        }
-
-        function updateJobOutput(event) {
-            $("#" + event.data.job_id  +" .output span").html(event.data.output);
         }
 
         init();
